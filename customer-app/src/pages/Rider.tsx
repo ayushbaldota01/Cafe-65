@@ -13,25 +13,25 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
 });
 
-function RouteMap({ destination }: { destination: {lat: number, lng: number} }) {
+function RouteMap({ destination, origin }: { destination: {lat: number, lng: number}, origin: {lat: number, lng: number} | null }) {
   const [route, setRoute] = useState<[number, number][]>([]);
-  const cafe = { lat: 18.038899, lng: 75.16045 };
+  const startPos = origin || { lat: 18.038899, lng: 75.16045 };
   
   useEffect(() => {
-    fetch(`https://router.project-osrm.org/route/v1/driving/${cafe.lng},${cafe.lat};${destination.lng},${destination.lat}?overview=full&geometries=geojson`)
+    fetch(`https://router.project-osrm.org/route/v1/driving/${startPos.lng},${startPos.lat};${destination.lng},${destination.lat}?overview=full&geometries=geojson`)
       .then(r => r.json())
       .then(data => {
         if (data.routes?.[0]) {
            setRoute(data.routes[0].geometry.coordinates.map((c: any) => [c[1], c[0]]));
         }
       });
-  }, [destination]);
+  }, [destination, startPos.lat, startPos.lng]);
 
   return (
     <div className="h-[250px] w-full rounded-2xl overflow-hidden border-2 border-brand-100 shadow-inner mt-4 z-0 relative">
-      <MapContainer center={[destination.lat, destination.lng]} zoom={13} style={{ height: '100%', width: '100%' }}>
+      <MapContainer center={origin ? [origin.lat, origin.lng] : [startPos.lat, startPos.lng]} zoom={14} style={{ height: '100%', width: '100%' }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        <Marker position={[cafe.lat, cafe.lng]} />
+        <Marker position={[startPos.lat, startPos.lng]} />
         <Marker position={[destination.lat, destination.lng]} />
         {route.length > 0 && <Polyline positions={route} color="#ea580c" weight={5} />}
       </MapContainer>
@@ -44,6 +44,7 @@ export function Rider() {
   const [activeOrder, setActiveOrder] = useState<Order | null>(null);
   const [watchId, setWatchId] = useState<number | null>(null);
   const [wakeLock, setWakeLock] = useState<any>(null);
+  const [currentLocation, setCurrentLocation] = useState<{lat: number, lng: number} | null>(null);
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -90,6 +91,7 @@ export function Rider() {
     const id = navigator.geolocation.watchPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;
+        setCurrentLocation({ lat: latitude, lng: longitude });
         await supabase.from('orders').update({
           riderLocation: { lat: latitude, lng: longitude }
         }).eq('id', order.id);
@@ -108,6 +110,7 @@ export function Rider() {
     }
     releaseWakeLock();
     setActiveOrder(null);
+    setCurrentLocation(null);
     
     await supabase.from('orders').update({
       status: 'delivered',
@@ -151,16 +154,30 @@ export function Rider() {
                </div>
             </div>
             
-            <RouteMap destination={{lat: activeOrder.customer_address.lat, lng: activeOrder.customer_address.lng}} />
+            <RouteMap 
+              destination={{lat: activeOrder.customer_address.lat, lng: activeOrder.customer_address.lng}} 
+              origin={currentLocation}
+            />
           </div>
           
-          <button 
-            onClick={() => finishDelivery(activeOrder)}
-            className="w-full bg-green-500 hover:bg-green-600 text-white font-black py-4 rounded-2xl shadow-lg shadow-green-200 transition-all active:scale-[0.98] flex items-center justify-center gap-3 text-lg"
-          >
-            <CheckCircle2 className="w-7 h-7" />
-            Mark as Delivered
-          </button>
+          <div className="flex gap-3">
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=${activeOrder.customer_address.lat},${activeOrder.customer_address.lng}`}
+              target="_blank"
+              rel="noreferrer"
+              className="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-black py-4 rounded-2xl shadow-lg shadow-blue-200 transition-all active:scale-[0.98] flex items-center justify-center gap-2 text-lg"
+            >
+              <Navigation className="w-6 h-6" />
+              Navigate
+            </a>
+            <button 
+              onClick={() => finishDelivery(activeOrder)}
+              className="flex-1 bg-green-500 hover:bg-green-600 text-white font-black py-4 rounded-2xl shadow-lg shadow-green-200 transition-all active:scale-[0.98] flex items-center justify-center gap-2 text-lg"
+            >
+              <CheckCircle2 className="w-6 h-6" />
+              Delivered
+            </button>
+          </div>
         </div>
       ) : (
         <div className="space-y-6">
