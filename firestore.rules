@@ -1,0 +1,43 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+  
+    // Helper functions for role checking
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Assumes custom claims 'staff' and 'delivery' are set on users
+    function isStaff() {
+      return isAuthenticated() && request.auth.token.staff == true;
+    }
+    
+    function isDelivery() {
+      return isAuthenticated() && request.auth.token.delivery == true;
+    }
+
+    match /items/{itemId} {
+      // Anyone can read items (public menu)
+      allow read: if true;
+      // Only staff can write to items
+      allow write: if isStaff();
+    }
+    
+    match /orders/{orderId} {
+      // Customers can read and write their own orders.
+      // Staff can read and write all orders.
+      allow read: if isStaff() || (isAuthenticated() && resource.data.customer_id == request.auth.uid);
+      
+      // On creation, ensure the customer_id matches the authenticated user
+      allow create: if isStaff() || (isAuthenticated() && request.resource.data.customer_id == request.auth.uid);
+      
+      // On update, customers can update if it's their order, staff can update all.
+      // (Optionally limit customer updates so they can't change status, etc., but keeping it simple for now)
+      allow update: if isStaff() || (isAuthenticated() && resource.data.customer_id == request.auth.uid);
+      
+      // Deletes are only for staff or owners
+      allow delete: if isStaff() || (isAuthenticated() && resource.data.customer_id == request.auth.uid);
+    }
+  }
+}

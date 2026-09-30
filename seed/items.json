@@ -1,0 +1,1436 @@
+[
+  {
+    "id": "item-1",
+    "name": "Hot Brew",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 110,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-2",
+    "name": "Hot Coffee Filter",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 110,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-3",
+    "name": "Coffee Espresso",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 169,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-4",
+    "name": "Americano",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 169,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-5",
+    "name": "Hot Chocolate",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-6",
+    "name": "Hazelnut Hot Chocolate",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 249,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-7",
+    "name": "Classic Cold Coffee",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 150,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-8",
+    "name": "Cold Coffee with Ice-cream",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 180,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-9",
+    "name": "Hazelnut Cold Coffee",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 220,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-10",
+    "name": "Irish Cold Coffee",
+    "category": "Coffee",
+    "description": "",
+    "base_price": 220,
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-11",
+    "name": "Bread Butter",
+    "category": "Toast & Breads",
+    "description": "3 slice of bread cut into 2 piece",
+    "base_price": 80,
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-12",
+    "name": "Jam Bread",
+    "category": "Toast & Breads",
+    "description": "3 slice of bread cut into 2 piece",
+    "base_price": 90,
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-13",
+    "name": "Kadak Toast",
+    "category": "Toast & Breads",
+    "description": "",
+    "base_price": 60,
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-14",
+    "name": "Garlic Bread",
+    "category": "Toast & Breads",
+    "description": "",
+    "base_price": 150,
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-15",
+    "name": "Cheese Garlic Bread",
+    "category": "Toast & Breads",
+    "description": "",
+    "base_price": 190,
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-16",
+    "name": "Cheese Chilli Garlic Bread",
+    "category": "Toast & Breads",
+    "description": "",
+    "base_price": 210,
+    "image_url": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-17",
+    "name": "Chai",
+    "category": "Tea & Maska",
+    "description": "",
+    "base_price": 40,
+    "image_url": "https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-18",
+    "name": "Green Tea",
+    "category": "Tea & Maska",
+    "description": "",
+    "base_price": 50,
+    "image_url": "https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-19",
+    "name": "Ginger Tea",
+    "category": "Tea & Maska",
+    "description": "",
+    "base_price": 50,
+    "image_url": "https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-20",
+    "name": "Amul butter toast",
+    "category": "Tea & Maska",
+    "description": "",
+    "base_price": 80,
+    "image_url": "https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-21",
+    "name": "Maska Bun",
+    "category": "Tea & Maska",
+    "description": "",
+    "base_price": 90,
+    "image_url": "https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-22",
+    "name": "Margherita Pizza",
+    "category": "Pizza",
+    "description": "Margherita sauce and cheese baked at a perfect tempreature",
+    "base_price": 179,
+    "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "8\"",
+        "price": 179
+      },
+      {
+        "name": "10\"",
+        "price": 249
+      },
+      {
+        "name": "12\"",
+        "price": 360
+      }
+    ],
+    "variant_type": "size",
+    "addons": [
+      {
+        "name": "Cheese Burst 8\"",
+        "price_delta": 50
+      },
+      {
+        "name": "Cheese Burst 10\"",
+        "price_delta": 80
+      },
+      {
+        "name": "Cheese Burst 12\"",
+        "price_delta": 110
+      },
+      {
+        "name": "Extra Veggie",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-23",
+    "name": "Onion, Corn & Cheese Pizza",
+    "category": "Pizza",
+    "description": "Baked with corn and heavy cheese layer",
+    "base_price": 189,
+    "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "8\"",
+        "price": 189
+      },
+      {
+        "name": "10\"",
+        "price": 280
+      },
+      {
+        "name": "12\"",
+        "price": 370
+      }
+    ],
+    "variant_type": "size",
+    "addons": [
+      {
+        "name": "Cheese Burst 8\"",
+        "price_delta": 50
+      },
+      {
+        "name": "Cheese Burst 10\"",
+        "price_delta": 80
+      },
+      {
+        "name": "Cheese Burst 12\"",
+        "price_delta": 110
+      },
+      {
+        "name": "Extra Veggie",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-24",
+    "name": "Capsicum & Onion Pizza",
+    "category": "Pizza",
+    "description": "Capsicum & onion layer baked with mozzarella cheese",
+    "base_price": 189,
+    "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "8\"",
+        "price": 189
+      },
+      {
+        "name": "10\"",
+        "price": 270
+      },
+      {
+        "name": "12\"",
+        "price": 390
+      }
+    ],
+    "variant_type": "size",
+    "addons": [
+      {
+        "name": "Cheese Burst 8\"",
+        "price_delta": 50
+      },
+      {
+        "name": "Cheese Burst 10\"",
+        "price_delta": 80
+      },
+      {
+        "name": "Cheese Burst 12\"",
+        "price_delta": 110
+      },
+      {
+        "name": "Extra Veggie",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-25",
+    "name": "FarmHouse Pizza",
+    "category": "Pizza",
+    "description": "Pizza loaded with capsicum, mushroom, olives, Jalapenos, onion",
+    "base_price": 189,
+    "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "8\"",
+        "price": 189
+      },
+      {
+        "name": "10\"",
+        "price": 290
+      },
+      {
+        "name": "12\"",
+        "price": 430
+      }
+    ],
+    "variant_type": "size",
+    "addons": [
+      {
+        "name": "Cheese Burst 8\"",
+        "price_delta": 50
+      },
+      {
+        "name": "Cheese Burst 10\"",
+        "price_delta": 80
+      },
+      {
+        "name": "Cheese Burst 12\"",
+        "price_delta": 110
+      },
+      {
+        "name": "Extra Veggie",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-26",
+    "name": "Spicy Paneer Pizza",
+    "category": "Pizza",
+    "description": "Spicy Paneer with vegetables and cheese",
+    "base_price": 189,
+    "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "8\"",
+        "price": 189
+      },
+      {
+        "name": "10\"",
+        "price": 290
+      },
+      {
+        "name": "12\"",
+        "price": 390
+      }
+    ],
+    "variant_type": "size",
+    "addons": [
+      {
+        "name": "Cheese Burst 8\"",
+        "price_delta": 50
+      },
+      {
+        "name": "Cheese Burst 10\"",
+        "price_delta": 80
+      },
+      {
+        "name": "Cheese Burst 12\"",
+        "price_delta": 110
+      },
+      {
+        "name": "Extra Veggie",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-27",
+    "name": "Mushroom & Veggie Pizza",
+    "category": "Pizza",
+    "description": "Mushroom & Vegetables and cheese",
+    "base_price": 189,
+    "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "8\"",
+        "price": 189
+      },
+      {
+        "name": "10\"",
+        "price": 290
+      },
+      {
+        "name": "12\"",
+        "price": 390
+      }
+    ],
+    "variant_type": "size",
+    "addons": [
+      {
+        "name": "Cheese Burst 8\"",
+        "price_delta": 50
+      },
+      {
+        "name": "Cheese Burst 10\"",
+        "price_delta": 80
+      },
+      {
+        "name": "Cheese Burst 12\"",
+        "price_delta": 110
+      },
+      {
+        "name": "Extra Veggie",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-28",
+    "name": "Paneer Makhani Pizza",
+    "category": "Pizza",
+    "description": "Makhani sauce toosed in panner with vegetables and cheese",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "8\"",
+        "price": 199
+      },
+      {
+        "name": "10\"",
+        "price": 290
+      },
+      {
+        "name": "12\"",
+        "price": 430
+      }
+    ],
+    "variant_type": "size",
+    "addons": [
+      {
+        "name": "Cheese Burst 8\"",
+        "price_delta": 50
+      },
+      {
+        "name": "Cheese Burst 10\"",
+        "price_delta": 80
+      },
+      {
+        "name": "Cheese Burst 12\"",
+        "price_delta": 110
+      },
+      {
+        "name": "Extra Veggie",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-29",
+    "name": "Onion Rings",
+    "category": "Small Bites",
+    "description": "",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-30",
+    "name": "Potato Wedges",
+    "category": "Small Bites",
+    "description": "",
+    "base_price": 249,
+    "image_url": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-31",
+    "name": "Veggiee sticks",
+    "category": "Small Bites",
+    "description": "",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-32",
+    "name": "Corn & Cheese Balls",
+    "category": "Small Bites",
+    "description": "",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-33",
+    "name": "Nachos",
+    "category": "Small Bites",
+    "description": "",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-34",
+    "name": "Plain Maggi",
+    "category": "Maggi",
+    "description": "",
+    "base_price": 99,
+    "image_url": "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-35",
+    "name": "Peri Peri Maggi",
+    "category": "Maggi",
+    "description": "",
+    "base_price": 119,
+    "image_url": "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-36",
+    "name": "Cheese Maggi",
+    "category": "Maggi",
+    "description": "",
+    "base_price": 149,
+    "image_url": "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-37",
+    "name": "Peri Peri Cheese Maggi",
+    "category": "Maggi",
+    "description": "",
+    "base_price": 189,
+    "image_url": "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-38",
+    "name": "Alfredo Pasta",
+    "category": "Pasta",
+    "description": "Tossed In white Creamy Sauce With Exotic Veggies",
+    "base_price": 280,
+    "image_url": "https://images.unsplash.com/photo-1621996316565-e3dbc646d9a1?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "Pennee",
+        "price": 0
+      },
+      {
+        "name": "Fusilli",
+        "price": 0
+      },
+      {
+        "name": "Macroni",
+        "price": 0
+      }
+    ],
+    "variant_type": "type",
+    "addons": []
+  },
+  {
+    "id": "item-39",
+    "name": "Baked white Sauce Pasta",
+    "category": "Pasta",
+    "description": "Mix of White Cream Sauce, tossed with Exotic Veggies",
+    "base_price": 330,
+    "image_url": "https://images.unsplash.com/photo-1621996316565-e3dbc646d9a1?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "Pennee",
+        "price": 0
+      },
+      {
+        "name": "Fusilli",
+        "price": 0
+      },
+      {
+        "name": "Macroni",
+        "price": 0
+      }
+    ],
+    "variant_type": "type",
+    "addons": []
+  },
+  {
+    "id": "item-40",
+    "name": "Macroni Cheese Pasta",
+    "category": "Pasta",
+    "description": "Full load of cheese heaven with lot of cheesey Creamy pasta",
+    "base_price": 349,
+    "image_url": "https://images.unsplash.com/photo-1621996316565-e3dbc646d9a1?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "Pennee",
+        "price": 0
+      },
+      {
+        "name": "Fusilli",
+        "price": 0
+      },
+      {
+        "name": "Macroni",
+        "price": 0
+      }
+    ],
+    "variant_type": "type",
+    "addons": []
+  },
+  {
+    "id": "item-41",
+    "name": "Desi Swaad Pasta",
+    "category": "Pasta",
+    "description": "A indian Spiced Pasta With Desi taste",
+    "base_price": 299,
+    "image_url": "https://images.unsplash.com/photo-1621996316565-e3dbc646d9a1?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [
+      {
+        "name": "Pennee",
+        "price": 0
+      },
+      {
+        "name": "Fusilli",
+        "price": 0
+      },
+      {
+        "name": "Macroni",
+        "price": 0
+      }
+    ],
+    "variant_type": "type",
+    "addons": []
+  },
+  {
+    "id": "item-42",
+    "name": "Aloo Tikki Burger",
+    "category": "Burger",
+    "description": "",
+    "base_price": 99,
+    "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-43",
+    "name": "Biggy Veggie Burger",
+    "category": "Burger",
+    "description": "",
+    "base_price": 149,
+    "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-44",
+    "name": "Crispy Panner Burger",
+    "category": "Burger",
+    "description": "",
+    "base_price": 179,
+    "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-45",
+    "name": "Creamy Cheese Burger",
+    "category": "Burger",
+    "description": "",
+    "base_price": 179,
+    "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-46",
+    "name": "MahaRaja Burger",
+    "category": "Burger",
+    "description": "",
+    "base_price": 269,
+    "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-47",
+    "name": "Spicy Peri Peri Mexican Burger",
+    "category": "Burger",
+    "description": "",
+    "base_price": 249,
+    "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-48",
+    "name": "Club Sandwich",
+    "category": "Sandwich",
+    "description": "",
+    "base_price": 129,
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-49",
+    "name": "Chocolate Sandwich",
+    "category": "Sandwich",
+    "description": "",
+    "base_price": 129,
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-50",
+    "name": "Cheese GRILLED Sandwich",
+    "category": "Sandwich",
+    "description": "",
+    "base_price": 149,
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-51",
+    "name": "Vegetable cheese Sandwich",
+    "category": "Sandwich",
+    "description": "",
+    "base_price": 179,
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-52",
+    "name": "Paneer Grilled Sandwich",
+    "category": "Sandwich",
+    "description": "",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-53",
+    "name": "Paneer Makhani Grilled Sandwich",
+    "category": "Sandwich",
+    "description": "",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-54",
+    "name": "Bombay Sandwich",
+    "category": "Sandwich",
+    "description": "",
+    "base_price": 169,
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-55",
+    "name": "Salted crispy Fries",
+    "category": "Fries",
+    "description": "The First fries you had in your mind",
+    "base_price": 149,
+    "image_url": "https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Mayo",
+        "price_delta": 30
+      },
+      {
+        "name": "Cheese",
+        "price_delta": 30
+      },
+      {
+        "name": "Greek Dip",
+        "price_delta": 30
+      },
+      {
+        "name": "Spicy Dip",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-56",
+    "name": "Peri Peri Fries",
+    "category": "Fries",
+    "description": "Tossed and Mixed in Spicy and surprise Masala",
+    "base_price": 190,
+    "image_url": "https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Mayo",
+        "price_delta": 30
+      },
+      {
+        "name": "Cheese",
+        "price_delta": 30
+      },
+      {
+        "name": "Greek Dip",
+        "price_delta": 30
+      },
+      {
+        "name": "Spicy Dip",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-57",
+    "name": "Cheese loaded Fries",
+    "category": "Fries",
+    "description": "Cheese cheese And cheese till it satisfy your cravings",
+    "base_price": 220,
+    "image_url": "https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Mayo",
+        "price_delta": 30
+      },
+      {
+        "name": "Cheese",
+        "price_delta": 30
+      },
+      {
+        "name": "Greek Dip",
+        "price_delta": 30
+      },
+      {
+        "name": "Spicy Dip",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-58",
+    "name": "Mexican Loaded Fries",
+    "category": "Fries",
+    "description": "Fires Loaded with, mayo,Spice of peri peri ,sauce, and exotic taste",
+    "base_price": 220,
+    "image_url": "https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Mayo",
+        "price_delta": 30
+      },
+      {
+        "name": "Cheese",
+        "price_delta": 30
+      },
+      {
+        "name": "Greek Dip",
+        "price_delta": 30
+      },
+      {
+        "name": "Spicy Dip",
+        "price_delta": 30
+      }
+    ]
+  },
+  {
+    "id": "item-59",
+    "name": "Vanilla Shake",
+    "category": "Milkshakes",
+    "description": "Smooth & creamy concoction of vanilla ice cream, milk & vanilla extract",
+    "base_price": 130,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-60",
+    "name": "Strawberry Shake",
+    "category": "Milkshakes",
+    "description": "A blend of strawberry shot syrup",
+    "base_price": 130,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-61",
+    "name": "Chocolate Shake",
+    "category": "Milkshakes",
+    "description": "Old fashioned milkshake made with thick & indulgent chocolate & chocolate ice cream",
+    "base_price": 149,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-62",
+    "name": "Cold Bournvita",
+    "category": "Milkshakes",
+    "description": "Nostalgic chocolate milk",
+    "base_price": 149,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-63",
+    "name": "Kit-kat Milkshake",
+    "category": "Milkshakes",
+    "description": "Blend of kit-kat and choclate",
+    "base_price": 180,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-64",
+    "name": "Oreo Milkshake",
+    "category": "Milkshakes",
+    "description": "Creamy & chocolatey balance",
+    "base_price": 180,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-65",
+    "name": "Dry Fruit Milkshake",
+    "category": "Milkshakes",
+    "description": "Blend of all the healthy dry fruits",
+    "base_price": 160,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-66",
+    "name": "Browine Shake",
+    "category": "Milkshakes",
+    "description": "Loaded with brownie & chocolate",
+    "base_price": 220,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-67",
+    "name": "Blueberry Shake",
+    "category": "Milkshakes",
+    "description": "Prepared with blueberry & vanilla taste fruity & creamy",
+    "base_price": 230,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-68",
+    "name": "Mango Milkshake",
+    "category": "Milkshakes",
+    "description": "Blend of alphonso mango & Milk",
+    "base_price": 149,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-69",
+    "name": "Nutella & Brownie Shake",
+    "category": "Milkshakes",
+    "description": "Blend of nutella , hazelnut & cocoa",
+    "base_price": 250,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-70",
+    "name": "Lotus Biscoff Shake",
+    "category": "Milkshakes",
+    "description": "Blend of creamy biscoff spread, crunchy biscoff cookies & vanilla",
+    "base_price": 280,
+    "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": [
+      {
+        "name": "Blueberry Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "price_delta": 60
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "price_delta": 60
+      }
+    ]
+  },
+  {
+    "id": "item-71",
+    "name": "Iced Americano",
+    "category": "Iced Coffee",
+    "description": "",
+    "base_price": 189,
+    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-72",
+    "name": "Iced Latte",
+    "category": "Iced Coffee",
+    "description": "",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-73",
+    "name": "Iced Mocha",
+    "category": "Iced Coffee",
+    "description": "",
+    "base_price": 199,
+    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-74",
+    "name": "Iced Vanilla Latte",
+    "category": "Iced Coffee",
+    "description": "",
+    "base_price": 220,
+    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  },
+  {
+    "id": "item-75",
+    "name": "Classic Cold Brew",
+    "category": "Iced Coffee",
+    "description": "",
+    "base_price": 180,
+    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=400",
+    "is_available": true,
+    "variants": [],
+    "variant_type": null,
+    "addons": []
+  }
+]

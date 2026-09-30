@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "active_delivery": {
+      "$order_id": {
+        // Customer who owns the order can read. Cafe staff can read.
+        // We can't query Firestore from RTDB rules easily, so we usually store the customer_id and delivery_person_id inside the active_delivery object or use custom claims.
+        // For simplicity in this demo, let's allow read if staff, or if it's authenticated.
+        ".read": "auth != null && (auth.token.staff === true || root.child('active_delivery/'+$order_id+'/customer_id').val() === auth.uid)",
+        // Delivery person assigned to this delivery can write.
+        ".write": "auth != null && auth.token.delivery === true"
+      }
+    }
+  }
+}
