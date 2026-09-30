@@ -7,7 +7,7 @@ export interface Item {
   image_url: string;
   is_available: boolean;
   variants: { name: string; price: number }[];
-  variant_type: "size" | "base_choice" | null;
+  variant_type: "size" | "base_choice" | "type" | null;
   addons: { name: string; price_delta: number }[];
 }
 

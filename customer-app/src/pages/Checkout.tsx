@@ -12,7 +12,7 @@ import { supabase } from '../lib/supabase';
 
 const CAFE_LAT = 18.038899;
 const CAFE_LNG = 75.16045;
-const MAX_RADIUS_KM = 5;
+// const MAX_RADIUS_KM = 5;
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -21,16 +21,16 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
 });
 
-function getDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
-  const R = 6371;
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLon = (lon2 - lon1) * Math.PI / 180;
-  const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-    Math.sin(dLon/2) * Math.sin(dLon/2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  return R * c;
-}
+// function getDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
+//   const R = 6371;
+//   const dLat = (lat2 - lat1) * Math.PI / 180;
+//   const dLon = (lon2 - lon1) * Math.PI / 180;
+//   const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+//     Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+//     Math.sin(dLon/2) * Math.sin(dLon/2);
+//   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+//   return R * c;
+// }
 
 export function Checkout() {
   const { items, getSubtotal, getTotal, deliveryFee, clearCart } = useCartStore();
@@ -103,7 +103,7 @@ export function Checkout() {
       return;
     }
     
-    const distance = getDistance(CAFE_LAT, CAFE_LNG, position.lat, position.lng);
+    // const distance = getDistance(CAFE_LAT, CAFE_LNG, position.lat, position.lng);
     // REMOVED FOR TESTING
     // if (distance > MAX_RADIUS_KM) {
     //   alert(`Sorry, your location is ${distance.toFixed(1)}km away. We only deliver within ${MAX_RADIUS_KM}km of Cafe.`);
