@@ -17,7 +17,7 @@ export const useCartStore = create<CartState>()(
   persist(
     (set, get) => ({
       items: [],
-      deliveryFee: 50,
+      deliveryFee: 49,
       
       addItem: (newItem) => set((state) => {
         const existingIndex = state.items.findIndex(

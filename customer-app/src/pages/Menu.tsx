@@ -1,17 +1,30 @@
-import { useState } from 'react';
-import { dummyItems, CATEGORIES } from '../lib/dummyData';
+import { useState, useEffect } from 'react';
+import { CATEGORIES } from '../lib/dummyData';
 import { ItemCard } from '../components/Menu/ItemCard';
 import { ItemDetailModal } from '../components/Menu/ItemDetailModal';
 import { CafeHero } from '../components/Menu/CafeHero';
 import { CafeInfoModal } from '../components/Menu/CafeInfoModal';
 import type { Item } from '../types';
+import { supabase } from '../lib/supabase';
 
 export function Menu() {
   const [activeCategory, setActiveCategory] = useState(CATEGORIES[0]);
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [menuItems, setMenuItems] = useState<Item[]>([]);
 
-  const filteredItems = dummyItems.filter(item => 
+  useEffect(() => {
+    const fetchItems = async () => {
+      const { data } = await supabase.from('items').select('*').order('name');
+      if (data) {
+        // Only show items that are available for the customer app
+        setMenuItems(data.filter(item => item.is_available));
+      }
+    };
+    fetchItems();
+  }, []);
+
+  const filteredItems = menuItems.filter(item => 
     activeCategory === 'All' ? true : item.category.toLowerCase() === activeCategory.toLowerCase()
   );
 
