@@ -42,8 +42,21 @@ export function Checkout() {
   const [otp, setOtp] = useState('');
   const [step, setStep] = useState<'phone' | 'otp' | 'checkout'>(user ? 'checkout' : 'phone');
   
+  const [houseNumber, setHouseNumber] = useState('');
   const [addressText, setAddressText] = useState('');
   const [position, setPosition] = useState({lat: CAFE_LAT, lng: CAFE_LNG});
+
+  const fetchAddressFromCoords = async (lat: number, lng: number) => {
+    try {
+      const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`);
+      const data = await res.json();
+      if (data && data.display_name) {
+        setAddressText(data.display_name);
+      }
+    } catch (e) {
+      console.error("Reverse geocoding failed", e);
+    }
+  };
   const [paymentMethod, setPaymentMethod] = useState<'cod' | 'razorpay'>('cod');
   const [isPlacing, setIsPlacing] = useState(false);
 
@@ -51,6 +64,7 @@ export function Checkout() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((pos) => {
         setPosition({lat: pos.coords.latitude, lng: pos.coords.longitude});
+        fetchAddressFromCoords(pos.coords.latitude, pos.coords.longitude);
       }, () => alert("Could not get location"));
     }
   };
@@ -62,7 +76,9 @@ export function Checkout() {
         dragend() {
           const marker = markerRef.current;
           if (marker != null) {
-            setPosition(marker.getLatLng());
+            const pos = marker.getLatLng();
+            setPosition(pos);
+            fetchAddressFromCoords(pos.lat, pos.lng);
           }
         },
       }),
@@ -71,6 +87,7 @@ export function Checkout() {
     useMapEvents({
       click(e) {
         setPosition(e.latlng);
+        fetchAddressFromCoords(e.latlng.lat, e.latlng.lng);
       },
     });
 
@@ -98,8 +115,16 @@ export function Checkout() {
   };
 
   const handlePlaceOrder = async () => {
+    if (position.lat === CAFE_LAT && position.lng === CAFE_LNG) {
+      alert("Please pin your exact delivery location on the map. The map must not be left at the cafe's default location.");
+      return;
+    }
+    if (!houseNumber) {
+      alert("Please enter your House / Flat / Block No.");
+      return;
+    }
     if (!addressText) {
-      alert("Please enter a valid address");
+      alert("Please wait for your address to be verified from the map pin.");
       return;
     }
     
@@ -121,7 +146,7 @@ export function Checkout() {
         delivery_fee: deliveryFee,
         total: getTotal(),
         customer_address: {
-          text: addressText,
+          text: `${houseNumber}, ${addressText}`,
           lat: position.lat,
           lng: position.lng
         },
@@ -209,13 +234,22 @@ export function Checkout() {
         <h2 className="text-xl font-bold mb-4">Delivery Address</h2>
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">House / Flat / Block No.</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">House / Flat / Block No. <span className="text-red-500">*</span></label>
             <input 
               type="text"
-              value={addressText}
-              onChange={(e) => setAddressText(e.target.value)}
+              value={houseNumber}
+              onChange={(e) => setHouseNumber(e.target.value)}
               placeholder="e.g. 101, XYZ Apartment"
               className="w-full border-gray-300 rounded-lg shadow-sm p-3 border focus:ring-brand-500 focus:border-brand-500"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Verified Map Location</label>
+            <textarea 
+              readOnly
+              value={addressText}
+              placeholder="Move the map pin or click 'Use My Location' to auto-fill your exact verified address..."
+              className="w-full border-gray-300 rounded-lg shadow-sm p-3 border bg-gray-50 text-gray-600 min-h-[80px]"
             />
           </div>
           
