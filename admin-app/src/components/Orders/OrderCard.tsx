@@ -17,7 +17,11 @@ export function OrderCard({ order }: Props) {
     if (details?.prepTime) updates.prep_time_estimate_mins = details.prepTime;
     if (details?.eta) updates.eta_delivery = details.eta;
 
-    await supabase.from('orders').update(updates).eq('id', id);
+    const { error } = await supabase.from('orders').update(updates).eq('id', id);
+    if (error) {
+      console.error("Failed to update order:", error);
+      alert("Error updating order: " + error.message);
+    }
   };
   const [timeAgo, setTimeAgo] = useState('');
   
