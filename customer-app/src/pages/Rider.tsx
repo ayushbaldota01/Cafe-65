@@ -2,6 +2,42 @@ import { useState, useEffect } from 'react';
 import { MapPin, Navigation, CheckCircle2, Bike } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import type { Order } from '../types';
+import { MapContainer, TileLayer, Marker, Polyline } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+});
+
+function RouteMap({ destination }: { destination: {lat: number, lng: number} }) {
+  const [route, setRoute] = useState<[number, number][]>([]);
+  const cafe = { lat: 18.038899, lng: 75.16045 };
+  
+  useEffect(() => {
+    fetch(`https://router.project-osrm.org/route/v1/driving/${cafe.lng},${cafe.lat};${destination.lng},${destination.lat}?overview=full&geometries=geojson`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.routes?.[0]) {
+           setRoute(data.routes[0].geometry.coordinates.map((c: any) => [c[1], c[0]]));
+        }
+      });
+  }, [destination]);
+
+  return (
+    <div className="h-[250px] w-full rounded-2xl overflow-hidden border-2 border-brand-100 shadow-inner mt-4 z-0 relative">
+      <MapContainer center={[destination.lat, destination.lng]} zoom={13} style={{ height: '100%', width: '100%' }}>
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <Marker position={[cafe.lat, cafe.lng]} />
+        <Marker position={[destination.lat, destination.lng]} />
+        {route.length > 0 && <Polyline positions={route} color="#ea580c" weight={5} />}
+      </MapContainer>
+    </div>
+  );
+}
 
 export function Rider() {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -114,6 +150,8 @@ export function Rider() {
                  <p className="font-mono font-black text-gray-900 text-lg">#{activeOrder.id.slice(-6)}</p>
                </div>
             </div>
+            
+            <RouteMap destination={{lat: activeOrder.customer_address.lat, lng: activeOrder.customer_address.lng}} />
           </div>
           
           <button 
