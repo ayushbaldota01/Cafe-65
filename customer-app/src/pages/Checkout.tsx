@@ -10,8 +10,8 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { supabase } from '../lib/supabase';
 
-const CAFE_LAT = 12.9715987;
-const CAFE_LNG = 77.5945627;
+const CAFE_LAT = 18.038899;
+const CAFE_LNG = 75.16045;
 const MAX_RADIUS_KM = 5;
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -104,10 +104,11 @@ export function Checkout() {
     }
     
     const distance = getDistance(CAFE_LAT, CAFE_LNG, position.lat, position.lng);
-    if (distance > MAX_RADIUS_KM) {
-      alert(`Sorry, your location is ${distance.toFixed(1)}km away. We only deliver within ${MAX_RADIUS_KM}km of Cafe.`);
-      return;
-    }
+    // REMOVED FOR TESTING
+    // if (distance > MAX_RADIUS_KM) {
+    //   alert(`Sorry, your location is ${distance.toFixed(1)}km away. We only deliver within ${MAX_RADIUS_KM}km of Cafe.`);
+    //   return;
+    // }
     
     setIsPlacing(true);
     
@@ -239,7 +240,7 @@ export function Checkout() {
             </div>
             <p className="text-xs font-semibold text-gray-500 mt-3 flex items-center gap-1.5">
                <span className="w-2 h-2 rounded-full bg-brand-500 inline-block"></span>
-               Drag the pin to your exact location (Max {MAX_RADIUS_KM}km from Cafe).
+               Drag the pin to your exact location (No distance limit for testing).
             </p>
         </div>
       </div>
