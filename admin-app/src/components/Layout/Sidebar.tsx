@@ -1,11 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Coffee, ListOrdered, MenuSquare, LogOut } from 'lucide-react';
+import { Coffee, ListOrdered, MenuSquare, LogOut, X } from 'lucide-react';
 
 interface Props {
   onLogout: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-export function Sidebar({ onLogout }: Props) {
+export function Sidebar({ onLogout, isOpen, onClose }: Props) {
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -18,18 +20,36 @@ export function Sidebar({ onLogout }: Props) {
   `;
 
   return (
-    <aside className="w-72 bg-white border-r flex flex-col shadow-sm">
-      <div className="p-6 flex items-center gap-3 border-b">
-        <Coffee className="w-8 h-8 text-brand-600" />
-        <h1 className="text-2xl font-bold text-gray-900">Cafe 65</h1>
-      </div>
+    <>
+      {/* Backdrop */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden" 
+          onClick={onClose}
+        />
+      )}
+
+      {/* Sidebar */}
+      <aside className={`
+        fixed lg:static top-0 left-0 h-full w-72 bg-white border-r flex flex-col shadow-sm z-50 transition-transform duration-300
+        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+      `}>
+        <div className="p-6 flex items-center justify-between border-b">
+          <div className="flex items-center gap-3">
+            <Coffee className="w-8 h-8 text-brand-600" />
+            <h1 className="text-2xl font-bold text-gray-900">Cafe 65</h1>
+          </div>
+          <button className="lg:hidden p-2 -mr-2" onClick={onClose}>
+            <X className="w-6 h-6 text-gray-500" />
+          </button>
+        </div>
       
       <nav className="flex-1 p-4 space-y-3">
-        <Link to="/" className={linkClass('/')}>
+        <Link to="/" onClick={onClose} className={linkClass('/')}>
           <ListOrdered className="w-6 h-6" />
           Live Orders
         </Link>
-        <Link to="/menu" className={linkClass('/menu')}>
+        <Link to="/menu" onClick={onClose} className={linkClass('/menu')}>
           <MenuSquare className="w-6 h-6" />
           Menu Management
         </Link>
@@ -45,5 +65,6 @@ export function Sidebar({ onLogout }: Props) {
         </button>
       </div>
     </aside>
+    </>
   );
 }
