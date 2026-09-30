@@ -6,16 +6,28 @@ import { MenuManagement } from './pages/MenuManagement';
 import { useState } from 'react';
 
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem('isAdminAuth') === 'true';
+  });
+
+  const handleLogin = () => {
+    localStorage.setItem('isAdminAuth', 'true');
+    setIsAuthenticated(true);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('isAdminAuth');
+    setIsAuthenticated(false);
+  };
 
   if (!isAuthenticated) {
-    return <Login onLogin={() => setIsAuthenticated(true)} />;
+    return <Login onLogin={handleLogin} />;
   }
 
   return (
     <BrowserRouter>
       <div className="flex h-screen bg-gray-100 font-sans">
-        <Sidebar onLogout={() => setIsAuthenticated(false)} />
+        <Sidebar onLogout={handleLogout} />
         <main className="flex-1 overflow-auto p-8 relative">
           <Routes>
             <Route path="/" element={<Dashboard />} />
