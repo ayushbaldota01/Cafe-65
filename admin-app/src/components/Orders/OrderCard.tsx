@@ -1,5 +1,5 @@
 import type { Order } from '../../types';
-import { useAdminStore } from '../../store/adminStore';
+import { supabase } from '../../lib/supabase';
 import { formatDistanceToNow } from 'date-fns';
 import { useState, useEffect } from 'react';
 
@@ -8,7 +8,17 @@ interface Props {
 }
 
 export function OrderCard({ order }: Props) {
-  const { updateOrderStatus } = useAdminStore();
+  const updateOrderStatus = async (id: string, status: string, details?: any) => {
+    const timestampKey = `${status}_at`;
+    const updates: any = {
+      status,
+      status_timestamps: { ...order.status_timestamps, [timestampKey]: new Date().toISOString() }
+    };
+    if (details?.prepTime) updates.prep_time_estimate_mins = details.prepTime;
+    if (details?.eta) updates.eta_delivery = details.eta;
+
+    await supabase.from('orders').update(updates).eq('id', id);
+  };
   const [timeAgo, setTimeAgo] = useState('');
   
   const [showPrepModal, setShowPrepModal] = useState(false);

@@ -1,8 +1,24 @@
-import { useAdminStore } from '../store/adminStore';
+import { useEffect, useState } from 'react';
+import { supabase } from '../lib/supabase';
 import { Edit2, Plus } from 'lucide-react';
+import type { Item } from '../types';
 
 export function MenuManagement() {
-  const { items, toggleItemAvailability } = useAdminStore();
+  const [items, setItems] = useState<Item[]>([]);
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const fetchItems = async () => {
+    const { data } = await supabase.from('items').select('*').order('name');
+    if (data) setItems(data as Item[]);
+  };
+
+  const toggleItemAvailability = async (id: string, currentStatus: boolean) => {
+    await supabase.from('items').update({ is_available: !currentStatus }).eq('id', id);
+    fetchItems();
+  };
 
   return (
     <div className="space-y-8 pb-10">
@@ -42,7 +58,7 @@ export function MenuManagement() {
                   <td className="p-4 font-bold text-gray-900">₹{item.base_price}</td>
                   <td className="p-4">
                     <button 
-                      onClick={() => toggleItemAvailability(item.id)}
+                      onClick={() => toggleItemAvailability(item.id, item.is_available)}
                       className={`px-4 py-2 rounded-full text-sm font-bold min-w-[100px] transition-colors ${
                         item.is_available 
                           ? 'bg-green-100 text-green-700 hover:bg-green-200' 

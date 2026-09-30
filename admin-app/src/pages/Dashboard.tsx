@@ -1,10 +1,13 @@
 import { useAdminStore } from '../store/adminStore';
 import { OrderCard } from '../components/Orders/OrderCard';
 import { BugPlay } from 'lucide-react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { supabase } from '../lib/supabase';
+import type { Order } from '../types';
 
 export function Dashboard() {
-  const { orders, simulateNewOrder, lastNewOrderId, clearNewOrderAlert } = useAdminStore();
+  const { lastNewOrderId, clearNewOrderAlert } = useAdminStore();
+  const [orders, setOrders] = useState<Order[]>([]);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const activeStatuses = ['placed', 'accepted', 'preparing', 'out_for_delivery'];
@@ -22,6 +25,21 @@ export function Dashboard() {
   };
 
   useEffect(() => {
+    const fetchOrders = async () => {
+      const { data } = await supabase.from('orders').select('*');
+      if (data) setOrders(data as Order[]);
+    };
+    fetchOrders();
+
+    const channel = supabase
+      .channel('admin-orders')
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, fetchOrders)
+      .subscribe();
+
+    return () => { supabase.removeChannel(channel); };
+  }, []);
+
+  useEffect(() => {
     if (lastNewOrderId) {
       if (audioRef.current) {
         audioRef.current.play().catch(e => console.error("Audio play failed:", e));
@@ -35,8 +53,9 @@ export function Dashboard() {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
         <button 
-          onClick={simulateNewOrder}
-          className="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          onClick={() => {}}
+          className="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors opacity-50 cursor-not-allowed"
+          title="Simulation disabled in live mode"
         >
           <BugPlay className="w-4 h-4" /> Simulate New Order
         </button>
